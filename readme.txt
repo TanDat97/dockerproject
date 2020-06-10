@@ -11,7 +11,8 @@ docker
 docker docker-subcommand --help
 docker info
 
-- Docker containers are built from Docker images. By default, Docker pulls these images from Docker Hub, a Docker registry managed by Docker, the company behind the Docker project. 
+- Docker containers are built from Docker images. By default, Docker pulls these images from Docker Hub, 
+  a Docker registry managed by Docker, the company behind the Docker project. 
 - Anyone can host their Docker images on Docker Hub, so most applications and Linux distributions you’ll need will have images hosted there.
 
 - To see the images that have been downloaded to your computer, type:
