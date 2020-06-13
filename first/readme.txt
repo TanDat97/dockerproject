@@ -44,7 +44,7 @@ https://www.digitalocean.com/community/tutorials/how-to-build-a-node-js-applicat
 
 docker build -t dat130497/nodejs-project .
 docker images
-docker run --name nodejs-image-demo -p 8000:8080 -d dat130497/nodejs-project
+docker run --name nodejs-image-demo -p 4040:4000 -d dat130497/nodejs-project
 docker ps
 
 
