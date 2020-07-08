@@ -27,6 +27,10 @@ docker start {ID || name}
 docker stop {ID || name}
 docker rm {ID || name}
 
+docker images -a
+docker rmi {ID}
+docker images purge
+
 - Committing Changes in a Container to a Docker Image
 docker commit -m "What you did to the image" -a "Author Name" container_id repository/new_image_name
 example: docker commit -m "added Node.js" -a "tandat" d9b100f2f636 tandat/ubuntu-nodejs
