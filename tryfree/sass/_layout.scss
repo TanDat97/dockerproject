@@ -12,7 +12,7 @@
 
 .header {
   font-size: 1.4rem;
-  height: 7rem;
+  height: 6rem;
   background-color: #ededed;
   border-bottom: var(--line);
   display: flex;
@@ -31,7 +31,36 @@
 
 .content {
   display: flex;
-  padding-top: 7rem;
+  padding-top: 6rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    .sidebar {
+      max-width: 7rem;
+    }
+    .side-nav .side-nav__item {
+      .side-nav__link {
+        width: 100%;
+        padding: 1.5rem 0.3rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+
+      .side-nav__icon {
+        margin: 0;
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+    .legal {
+      display: none;
+    }
+  }
 }
 
 .sidebar {
@@ -43,61 +72,24 @@
   max-width: 285px;
 }
 
-.hotel-view {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 7rem);
-  background-color: #fff;
-  flex: 1;
+.content.collapse-side .sidebar {
+  max-width: 7rem;
 }
 
-.detail {
+.main-contain {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 6rem);
+  background-color: #fff;
+  flex: 1;
+  padding: 1rem;
+}
+
+.content-header {
+  display: flex;
+}
+
+.table {
   font-size: 1.4rem;
-  display: flex;
-  padding: 4.5rem;
-  background-color: var(--color-grey-light-1);
-  border-bottom: var(--line);
-  flex-wrap: wrap;
-
-  @media only screen and (max-width: $bp-medium) {
-    padding: 3rem;
-  }
-
-  @media only screen and (max-width: $bp-small) {
-    flex-direction: column;
-  }
-}
-
-.description {
-  background-color: #fff;
-  box-shadow: var(--shadow-light);
-  padding: 3rem;
-  flex: 0 0 60%;
-  margin-right: 4.5rem;
-
-  @media only screen and (max-width: $bp-medium) {
-    padding: 2rem;
-    margin-right: 3rem;
-  }
-
-  @media only screen and (max-width: $bp-small) {
-    margin-right: 0;
-    margin-bottom: 3rem;
-  }
-}
-
-.user-reviews {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cta {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  margin-top: 2rem;
+  border: var(--line);
 }

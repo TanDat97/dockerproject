@@ -5,9 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
   <title>trillo &mdash; Your all-in-one booking app</title>
 </head>
@@ -51,15 +64,15 @@
         </div>
       </nav>
     </header>
-    <div class="content">
+    <div id="content" class="content">
       <nav class="sidebar">
         <ul class="side-nav">
-          <li class="side-nav__item side-nav__item--active">
+          <li class="side-nav__item active">
             <a href="" class="side-nav__link">
               <svg class="side-nav__icon">
                 <use xlink:href="img/sprite.svg#icon-home"></use>
               </svg>
-              <span>Hotel</span>
+              <span>Dashboard</span>
             </a>
           </li>
           <li class="side-nav__item">
@@ -75,7 +88,7 @@
               <svg class="side-nav__icon">
                 <use xlink:href="img/sprite.svg#icon-key"></use>
               </svg>
-              <span>Car rental</span>
+              <span>Car rental cvc</span>
             </a>
           </li>
           <li class="side-nav__item">
@@ -91,126 +104,48 @@
           &copy; 2019 by trillo. All rights reserved.
         </div>
       </nav>
-      <main class="hotel-view">
-        <!-- <div class="gallery">
-          <figure class="gallery__item">
-            <img src="img/hotel-1.jpg" alt="Photo of hotel 1" class="gallery__photo" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo" />
-          </figure>
-        </div> -->
-
-        <div class="overview">
-          <h1 class="overview__heading">
-            Hotel Las Palmas
-          </h1>
-          <div class="overview__stars">
-            <svg class="overview__icon-star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
+      <main class="main-contain">
+        <div class="content-header">
+          <button id="btn-collapse" class="nav-toggle">
+            <svg class="icon icon-list">
+              <use xlink:href="img/sprite.svg#icon-list2"></use>
             </svg>
-            <svg class="overview__icon-star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="overview__icon-star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="overview__icon-star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="overview__icon-star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
-          </div>
-          <div class="overview__location">
-            <svg class="overview__icon-location">
-              <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-            </svg>
-            <button class="btn-inline">Ho Chi Minh City</button>
-          </div>
-          <div class="overview__rating">
-            <div class="overview__rating-average">8.6</div>
-            <div class="overview__rating-count">429 votes</div>
-          </div>
+          </button>
         </div>
 
-        <div class="detail">
-          <div class="description">
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente
-              saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
-            </p>
-            <p class="paragraph">
-              Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure
-              aliquid aliquam.
-            </p>
-            <ul class="list">
-              <li class="list__item">Close to the beach</li>
-              <li class="list__item">Breakfast included</li>
-              <li class="list__item">Free airport shuttle</li>
-              <li class="list__item">Free wifi in all rooms</li>
-              <li class="list__item">Air conditioning and heating</li>
-              <li class="list__item">Pets allowed</li>
-              <li class="list__item">We speak all languages</li>
-              <li class="list__item">Perfect for families</li>
-            </ul>
-            <div class="recommend">
-              <p class="recommend__count">
-                Lucy and 3 other friends recommend this hotel.
-              </p>
-              <div class="recommend__friends">
-                <img src="img/user-3.jpg" alt="Friend 1" class="recommend__photo">
-                <img src="img/user-4.jpg" alt="Friend 2" class="recommend__photo">
-                <img src="img/user-5.jpg" alt="Friend 3" class="recommend__photo">
-                <img src="img/user-6.jpg" alt="Friend 4" class="recommend__photo">
-              </div>
-            </div>
-          </div>
-
-          <div class="user-reviews">
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam,
-                itaque officia ex.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user-1.jpg" alt="User 1" class="review__photo">
-                <div class="review__user-box">
-                  <p class="review__user-name">Nick Smith</p>
-                  <p class="review__user-date">Feb 23rd, 2020</p>
-                </div>
-                <div class="review__rating">7.8</div>
-              </figcaption>
-            </figure>
-            <figure class="review">
-              <blockquote class="review__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
-              </blockquote>
-              <figcaption class="review__user">
-                <img src="img/user-2.jpg" alt="User 1" class="review__photo">
-                <div class="review__user-box">
-                  <p class="review__user-name">Mary Thomas</p>
-                  <p class="review__user-date">Sept 13th, 2020</p>
-                </div>
-                <div class="review__rating">9.3</div>
-              </figcaption>
-            </figure>
-            <button class="btn-inline">Show all <span>&rarr;</span></button>
-          </div>
-
-          <div class="cta">
-            <h2 class="cta__book-now">
-              Good news! We have 4 free rooms for your selected dates!
-            </h2>
-            <button class="btn">
-              <span class="btn__visible">Book now</span>
-              <span class="btn__invisible">Only 4 rooms left</span>
-            </button>
-          </div>
+        <div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
       </main>
     </div>
   </div>
