@@ -95,8 +95,7 @@ class Animal {
 }
 
 let lion = new Animal("Lion");
-// lion.sing
-
+console.log(lion.greet())
 //In TypeScript, there are several places where type inference
 //is used to provide type information when there is no explicit
 //type annotation. For example, in this code
