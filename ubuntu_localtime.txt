@@ -1,0 +1,8 @@
+To set ubuntu use local time:
+timedatectl set-local-rtc 1 --adjust-system-clock
+
+To check this out: 
+timedatectl
+
+To undo this:
+timedatectl set-local-rtc 0 --adjust-system-clock
